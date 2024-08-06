@@ -13,9 +13,9 @@ def index_rte():
     db = db['Parameter']['Value']
     return "Hello world! " + db
 
-@app.route('/tt')
-def tt_rte():
-    return "yeah it worked"
+@app.route('/search')
+def search_rte():
+    return "search here"
 
 @app.route('/test')
 def test_rte():
