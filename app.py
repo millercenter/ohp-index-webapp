@@ -17,8 +17,9 @@ def tt_rte():
 
 @app.route('/test')
 def test_rte():
-    db = ssm.get_parameter(Name='/ohp-index-webapp/dbname')
-    db = db['Parameter']['Value']
+    #db = ssm.get_parameter(Name='/ohp-index-webapp/dbname')
+    #db = db['Parameter']['Value']
+    db = 'blah'
     return "Hello, World: " + db
 
 if __name__ == "__main__":
