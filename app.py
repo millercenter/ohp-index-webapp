@@ -2,7 +2,7 @@ from flask import Flask
 import boto3
 import json
 
-ssm = boto3.client('ssm')
+ssm = boto3.client('ssm', region_name='us-east-1')
 
 app = Flask(__name__)
 
