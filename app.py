@@ -11,6 +11,10 @@ app = Flask(__name__)
 def index_rte():
     return "Hello world!"
 
+@app.route('/tt')
+def tt_rte:
+    return "yeah it worked"
+
 @app.route('/test')
 def test_rte():
     db = ssm.get_parameter(Name='/ohp-index-webapp/dbname')
