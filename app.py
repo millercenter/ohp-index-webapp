@@ -9,7 +9,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index_rte():
-    return "Hello world!"
+    db = ssm.get_parameter(Name='/ohp-index-webapp/dbname')
+    db = db['Parameter']['Value']
+    return "Hello world! " + db
 
 @app.route('/tt')
 def tt_rte():
